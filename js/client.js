@@ -3,7 +3,7 @@ var name;
 var connectedUser;
 
 //connecting to our signaling server 
-var conn = new WebSocket('ws://localhost:9090');
+var conn = new WebSocket('ws://127.0.0.1:9090');
 
 conn.onopen = function () {
     console.log("Connected to the signaling server");
@@ -147,7 +147,6 @@ function handleLogin(success) {
 //initiating a call 
 callBtn.addEventListener("click", function () {
     var callToUsername = callToUsernameInput.value;
-
     if (callToUsername.length > 0) {
 
         connectedUser = callToUsername;
